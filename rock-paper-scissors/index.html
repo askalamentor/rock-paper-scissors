@@ -7,15 +7,17 @@
         <meta name="description" content="Rock, paper and scissors game">
         <meta name="keywords" content="Rock, Paper, Scissors">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="jscode.js">
+        <script src="jscode.js"></script>
     </head>
 
     <body>
         <main class="main-container">
             <h1>Make your choice</h1>
-            <label for="input-area">Rock, paper or scissors</label>
-            <input type="text" id="input-area">
-            <input type="submit" value="Let's play!">
+            <form>
+                <label for="user-input">Rock, paper or scissors</label>
+                <input type="text" id="user-input">
+                <button type="button">Let's play!</button>
+            </form>      
             <div id="result-area">
                 
             </div>
