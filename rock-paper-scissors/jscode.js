@@ -76,6 +76,18 @@ function compareResult(userInput, generatorInput) {
         return scoreArray;
 }
 
+function userScoreCounter() {
+    let userScore = document.getElementById("userScore").innerText;
+    userScore = parseInt(userScore);
+    userScore++;
+    document.getElementById("userScore").innerText = userScore;
+}
 
+function generatorScoreCounter() {
+    let generatorScore = document.getElementById("generatorScore").innerText;
+    generatorScore = parseInt(generatorScore);
+    generatorScore++;
+    document.getElementById("generatorScore").innerText = generatorScore;
+}
 
 
