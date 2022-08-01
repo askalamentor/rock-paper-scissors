@@ -12,6 +12,15 @@ window.addEventListener('load', () => {
         console.log(generatorInput);
         console.log(scoreArray);
 
+        if (scoreArray[0] === 1) 
+        {
+            userScoreCounter();
+        } 
+        else if (scoreArray[1] === 1) 
+        {
+            generatorScoreCounter();
+        }
+
     });
   });
 
