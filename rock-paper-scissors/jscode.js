@@ -1,3 +1,21 @@
+
+window.addEventListener('load', () => {
+
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", () => {
+        let userInput = getInputValue();
+        let generatorInput = randomGenerator();
+        let scoreArray = compareResult(userInput, generatorInput);
+
+        console.log(userInput);
+        console.log(generatorInput);
+        console.log(scoreArray);
+
+    });
+  });
+
+
 // Take user input
 function getInputValue() {
 
@@ -16,7 +34,7 @@ function randomGenerator() {
 
     let generatorInput = generatorArray[condition];
 
-    return generatorInput ;
+    return generatorInput;
 }
 
 // Compare user input and generator result 
@@ -25,13 +43,9 @@ function compareResult(userInput, generatorInput) {
     let userScore = 0;
     let generatorScore = 0;
 
-    while ((userScore || generatorScore) < 3) {
-
         if (userInput.toLowerCase() === generatorInput) {
-
-            continue;
-
-        } else if(userInput.toLowerCase === "rock") {
+            
+        } else if(userInput.toLowerCase() === "rock") {
             
             if (generatorInput === "paper") {
                 generatorScore++;
@@ -39,7 +53,7 @@ function compareResult(userInput, generatorInput) {
                 userScore++;
             }
 
-        } else if (userInput.toLowerCase === "paper") {
+        } else if (userInput.toLowerCase() === "paper") {
     
             if (generatorInput === "rock") {
                 userScore++;
@@ -47,7 +61,7 @@ function compareResult(userInput, generatorInput) {
                 generatorScore++;
             }
 
-        } else if (userInput.toLowerCase === "scissors") {
+        } else if (userInput.toLowerCase() === "scissors") {
 
             if (generatorInput === "paper") {
                 userScore++;
@@ -56,9 +70,12 @@ function compareResult(userInput, generatorInput) {
             }
 
         }
-    }
 
-    let scoreArray = [userScore, generatorScore];
+        let scoreArray = [userScore, generatorScore];
 
-    return scoreArray;
+        return scoreArray;
 }
+
+
+
+
