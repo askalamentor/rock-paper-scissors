@@ -24,7 +24,6 @@
         {
             generatorScoreCounter();
         }
-
     });
 
 // Take user input
@@ -87,7 +86,7 @@ function compareResult(userInput, generatorInput) {
         return scoreArray;
 }
 
-// document.querySelector() kullanarak dene
+
 function userScoreCounter() {
     let userScore = document.getElementById("userScore").innerText;
     userScore = parseInt(userScore);
