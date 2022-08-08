@@ -1,5 +1,9 @@
-
-window.addEventListener('load', () => {
+// Add input control elements like: string, no other inputs or
+// add 3 selectional input
+//
+// make css
+//
+// add end game options
 
     const button = document.getElementById("button");
 
@@ -22,8 +26,6 @@ window.addEventListener('load', () => {
         }
 
     });
-  });
-
 
 // Take user input
 function getInputValue() {
@@ -85,6 +87,7 @@ function compareResult(userInput, generatorInput) {
         return scoreArray;
 }
 
+// document.querySelector() kullanarak dene
 function userScoreCounter() {
     let userScore = document.getElementById("userScore").innerText;
     userScore = parseInt(userScore);
