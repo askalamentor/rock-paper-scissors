@@ -5,31 +5,41 @@
 //
 // add end game options
 
-    const button = document.getElementById("button");
+/* 
+    const rockButton = document.getElementById("rockButton");
+    const paperButton = document.getElementById("paperButton");
+    const scissorsButton = document.getElementById("scissorsButton");
+ */
 
-    button.addEventListener("click", () => {
-        let userInput = getInputValue();
-        let generatorInput = randomGenerator();
-        let scoreArray = compareResult(userInput, generatorInput);
+    const buttons = document.querySelectorAll("#buttonContainer > button");
 
-        console.log(userInput);
-        console.log(generatorInput);
-        console.log(scoreArray);
+    for (let i = 0; i < buttons.length; i++) {
 
-        if (scoreArray[0] === 1) 
-        {
-            userScoreCounter();
-        } 
-        else if (scoreArray[1] === 1) 
-        {
-            generatorScoreCounter();
-        }
-    });
+        buttons[i].addEventListener("click", () => {
+            let userInput = buttons[i].id;
+            let generatorInput = randomGenerator();
+            let scoreArray = compareResult(userInput, generatorInput);
+    
+            console.log(userInput);
+            console.log(generatorInput);
+            console.log(scoreArray);
+    
+            if (scoreArray[0] === 1) 
+            {
+                userScoreCounter();
+            } 
+            else if (scoreArray[1] === 1) 
+            {
+                generatorScoreCounter();
+            }
+        });
+
+    }
 
 // Take user input
 function getInputValue() {
 
-    let userInput = document.getElementById("user-input").value;
+    userInput = "";
 
     return userInput;
 }
