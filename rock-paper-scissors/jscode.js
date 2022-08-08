@@ -1,15 +1,7 @@
-// Add input control elements like: string, no other inputs or
-// add 3 selectional input
-//
 // make css
 //
 // add end game options
 
-/* 
-    const rockButton = document.getElementById("rockButton");
-    const paperButton = document.getElementById("paperButton");
-    const scissorsButton = document.getElementById("scissorsButton");
- */
 
     const buttons = document.querySelectorAll("#buttonContainer > button");
 
@@ -36,13 +28,6 @@
 
     }
 
-// Take user input
-function getInputValue() {
-
-    userInput = "";
-
-    return userInput;
-}
 
 // Random rock-paper-scissors generator
 function randomGenerator() {

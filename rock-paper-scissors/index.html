@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <title>Play rock, paper and scissors</title>
         <meta charset="UTF-8">
         <meta name="description" content="Rock, paper and scissors game">
         <meta name="keywords" content="Rock, Paper, Scissors">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="styles.css">
         <script src="jscode.js" defer></script> 
     </head>
 
     <body>
         <main class="main-container">
-            <h1>Make your choice</h1>
-            <form>
-                <div id="buttonContainer" class="buttonContainer">
-                    <button type="button" id="rock"
-                    class="inputButtons">Rock</button>
-                    <button type="button" id="paper"
-                    class="inputButtons">Paper</button>
-                    <button type="button" id="scissors"
-                    class="inputButtons">Scissors</button>
+            <h1>Welcome to the endless war!</h1>
+            <h2>Choose your weapon</h2>
+            <div id="rpsArea">
+                <form id="userRPS">
+                    <div id="buttonContainer" class="buttonContainer">
+                        <button type="button" id="rock"
+                        class="inputButtons">Rock</button>
+                        <button type="button" id="paper"
+                        class="inputButtons">Paper</button>
+                        <button type="button" id="scissors"
+                        class="inputButtons">Scissors</button>
+                    </div>
+                </form>
+                <div id="computerRPS">
+                    <img id="rockImage" src="" alt="rock">
+                    <img id="paperImg" src="" alt="paper">
+                    <img id="scissorsImage" src="" alt="scissors">
                 </div>
-            </form>      
-            <p id="userScore">0</p>
-            <p id="generatorScore">0</p>
-            <p id="winner"></p>
+            </div>
+                  
             <div id="result-area">
-                
+                <p id="userScore">0</p>
+                <p id="generatorScore">0</p>
             </div>
         </main>     
     </body>
-
 </html>
