@@ -20,11 +20,20 @@
     
             if (scoreArray[0] === 1) 
             {
-                userScoreCounter();
+                let userScore = userScoreCounter();
+
+                if (userScore === 5) {
+                    document.querySelector("#modal").style.zIndex = "100";
+                    document.querySelector("#main-container").style.pointerEvents = "none";
+                }
             } 
             else if (scoreArray[1] === 1) 
             {
-                generatorScoreCounter();
+                let generatorScore = generatorScoreCounter();
+                if (generatorScore === 5) {
+                    document.querySelector("#modal").style.zIndex = "100";
+                    document.querySelector("#main-container").style.pointerEvents = "none";
+                }
             }
         });      
     }
@@ -85,6 +94,7 @@ function userScoreCounter() {
     userScore = parseInt(userScore);
     userScore++;
     document.getElementById("userScore").innerText = userScore;
+    return userScore;
 }
 
 function generatorScoreCounter() {
@@ -92,6 +102,7 @@ function generatorScoreCounter() {
     generatorScore = parseInt(generatorScore);
     generatorScore++;
     document.getElementById("generatorScore").innerText = generatorScore;
+    return generatorScore;
 }
 
 // user and generator button style function are called after user choice.

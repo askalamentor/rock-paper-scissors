@@ -89,7 +89,7 @@ img {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    z-index: -0;
+    z-index: -100;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -100,7 +100,6 @@ img {
     max-height: 100%;
     border-radius: 50px;
     background-color: rgb(15, 15, 15);
-    pointer-events: none;
 }
 
 .modal > .modal-text {
@@ -144,3 +143,4 @@ img {
     transform: translateY(-5px);
     transition-duration: 1s;
 }
+
