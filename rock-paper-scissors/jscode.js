@@ -1,7 +1,3 @@
-// make css
-//
-// add end game options
-
 
     const buttons = document.querySelectorAll("#userRPS > button");
     const generatorButtons = document.querySelectorAll("#computerRPS > img");
@@ -118,7 +114,7 @@ function generatorButtonStyle(generatorInput, generatorButtons) {
 
 }
 
-// The function immediately calls after user choice to reset buttons styles.
+// The function calls immediately after clicking.
 function resetButtonsStyle(generatorButtons, buttons) {
 
     for (let i = 0; i < generatorButtons.length; i++) {
