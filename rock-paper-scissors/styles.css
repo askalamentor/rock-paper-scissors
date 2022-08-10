@@ -100,6 +100,7 @@ img {
     max-height: 100%;
     border-radius: 50px;
     background-color: rgb(15, 15, 15);
+    pointer-events: none;
 }
 
 .modal > .modal-text {
