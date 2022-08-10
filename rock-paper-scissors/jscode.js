@@ -4,12 +4,19 @@
 
 
     const buttons = document.querySelectorAll("#userRPS > button");
+    const generatorButtons = document.querySelectorAll("#computerRPS > img");
 
     for (let i = 0; i < buttons.length; i++) {
 
         buttons[i].addEventListener("click", () => {
+
+            // Reset user and generator button styles
+
+
             let userInput = buttons[i].id;
+            userButtonStyle(userInput);
             let generatorInput = randomGenerator();
+            generatorButtonStyle(generatorInput, generatorButtons);
             let scoreArray = compareResult(userInput, generatorInput);
     
             console.log(userInput);
@@ -94,6 +101,34 @@ function generatorScoreCounter() {
     generatorScore = parseInt(generatorScore);
     generatorScore++;
     document.getElementById("generatorScore").innerText = generatorScore;
+}
+
+// It adjusts generator button style after generating RPS. 
+function generatorButtonStyle(generatorInput, generatorButtons) {
+
+    if (generatorInput === "rock") {
+        document.getElementById(generatorButtons[0].id).style.transform = "translateY(-5px)";
+        document.getElementById(generatorButtons[0].id).style.border = "2px solid rgb(212, 212, 55)";
+    } else if (generatorInput === "paper") {
+        document.getElementById(generatorButtons[1].id).style.transform = "translateY(-5px)";
+        document.getElementById(generatorButtons[1].id).style.border = "2px solid rgb(212, 212, 55)";
+    } else if (generatorInput === "scissors") {
+        document.getElementById(generatorButtons[2].id).style.transform = "translateY(-5px)";
+        document.getElementById(generatorButtons[2].id).style.border = "2px solid rgb(212, 212, 55)";
+    }
+
+}
+
+// The function reset generatorButtonStyle after the waiting time.
+function resetGeneratorButtonStyle(generatorButtons) {
+        document.getElementById(generatorButtons[0].id).style.transform = "";
+        document.getElementById(generatorButtons[0].id).style.border = "";
+}
+
+// It adjusts user button style after pressing RPS.
+function userButtonStyle(userInput) {
+    document.getElementById(userInput).firstChild.style.transform= "translateY(-5px)";
+    document.getElementById(userInput).firstChild.style.border = "2px solid rgb(212, 212, 55)";
 }
 
 
