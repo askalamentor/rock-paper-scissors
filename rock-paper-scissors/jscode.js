@@ -10,8 +10,7 @@
 
         buttons[i].addEventListener("click", () => {
 
-            // Reset user and generator button styles
-
+            resetButtonsStyle(generatorButtons, buttons);
 
             let userInput = buttons[i].id;
             userButtonStyle(userInput);
@@ -31,12 +30,10 @@
             {
                 generatorScoreCounter();
             }
-        });
-
+        });      
     }
 
-
-// Random rock-paper-scissors generator
+// rock-paper-scissors generator
 function randomGenerator() {
     
     let condition = [];
@@ -49,7 +46,6 @@ function randomGenerator() {
     return generatorInput;
 }
 
-// Compare user input and generator result 
 function compareResult(userInput, generatorInput) {
 
     let userScore = 0;
@@ -88,7 +84,6 @@ function compareResult(userInput, generatorInput) {
         return scoreArray;
 }
 
-
 function userScoreCounter() {
     let userScore = document.getElementById("userScore").innerText;
     userScore = parseInt(userScore);
@@ -103,7 +98,11 @@ function generatorScoreCounter() {
     document.getElementById("generatorScore").innerText = generatorScore;
 }
 
-// It adjusts generator button style after generating RPS. 
+// user and generator button style function are called after user choice.
+function userButtonStyle(userInput) {
+    document.getElementById(userInput).firstChild.style.transform= "translateY(-5px)";
+    document.getElementById(userInput).firstChild.style.border = "2px solid rgb(212, 212, 55)";
+}
 function generatorButtonStyle(generatorInput, generatorButtons) {
 
     if (generatorInput === "rock") {
@@ -119,16 +118,18 @@ function generatorButtonStyle(generatorInput, generatorButtons) {
 
 }
 
-// The function reset generatorButtonStyle after the waiting time.
-function resetGeneratorButtonStyle(generatorButtons) {
-        document.getElementById(generatorButtons[0].id).style.transform = "";
-        document.getElementById(generatorButtons[0].id).style.border = "";
+// The function immediately calls after user choice to reset buttons styles.
+function resetButtonsStyle(generatorButtons, buttons) {
+
+    for (let i = 0; i < generatorButtons.length; i++) {
+        document.getElementById(generatorButtons[i].id).style.transform = "translateY(0px)";
+        document.getElementById(generatorButtons[i].id).style.border = "2px solid #555";
+        document.getElementById(buttons[i].id).firstChild.style.transform = "translateY(0px)";
+        document.getElementById(buttons[i].id).firstChild.style.border = "2px solid #555";
+    }
+
 }
 
-// It adjusts user button style after pressing RPS.
-function userButtonStyle(userInput) {
-    document.getElementById(userInput).firstChild.style.transform= "translateY(-5px)";
-    document.getElementById(userInput).firstChild.style.border = "2px solid rgb(212, 212, 55)";
-}
+
 
 
