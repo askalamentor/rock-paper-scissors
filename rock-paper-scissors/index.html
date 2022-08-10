@@ -7,6 +7,9 @@
         <meta name="keywords" content="Rock, Paper, Scissors">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"  href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
         <script src="jscode.js" defer></script> 
     </head>
 
@@ -16,25 +19,23 @@
             <h2>Choose your weapon</h2>
             <div id="rpsArea">
                 <form id="userRPS">
-                    <div id="buttonContainer" class="buttonContainer">
                         <button type="button" id="rock"
-                        class="inputButtons">Rock</button>
+                        class="inputButtons"><img src="./images/rock.JPG" alt="rock"></button>
                         <button type="button" id="paper"
-                        class="inputButtons">Paper</button>
+                        class="inputButtons"><img src="./images/paper.JPG" alt="paper"></button>
                         <button type="button" id="scissors"
-                        class="inputButtons">Scissors</button>
-                    </div>
+                        class="inputButtons"><img src="./images/scissors.JPG" alt="scissors"></button>
                 </form>
                 <div id="computerRPS">
-                    <img id="rockImage" src="" alt="rock">
-                    <img id="paperImg" src="" alt="paper">
-                    <img id="scissorsImage" src="" alt="scissors">
+                    <img id="rockImage" src="./images/rock.JPG" alt="rock">
+                    <img id="paperImg" src="./images/paper.JPG" alt="paper">
+                    <img id="scissorsImage" src="./images/scissors.JPG" alt="scissors">
                 </div>
             </div>
                   
             <div id="result-area">
-                <p id="userScore">0</p>
-                <p id="generatorScore">0</p>
+                <div id="userScore">0</div>
+                <div id="generatorScore">0</div>
             </div>
         </main>     
     </body>

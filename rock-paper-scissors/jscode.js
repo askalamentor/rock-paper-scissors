@@ -3,7 +3,7 @@
 // add end game options
 
 
-    const buttons = document.querySelectorAll("#buttonContainer > button");
+    const buttons = document.querySelectorAll("#userRPS > button");
 
     for (let i = 0; i < buttons.length; i++) {
 
