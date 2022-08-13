@@ -144,3 +144,17 @@ img {
     transition-duration: 1s;
 }
 
+#quit-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(49, 47, 47);
+    color: antiquewhite;
+    font-size: 72px;
+}
+
+#quit-page-container > #quit-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

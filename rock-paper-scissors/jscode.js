@@ -47,6 +47,10 @@
             document.querySelector("#modal-submit").addEventListener("click", () => {
                 resetGame();
             });
+
+            document.querySelector("#modal-endgame").addEventListener("click", () => {
+                window.location.href = "quitPage.html";
+            });
         });      
     }
 
@@ -154,6 +158,7 @@ function resetGame() {
     document.querySelector("#generatorScore").innerText = "0";
     document.querySelector("#main-container").style.filter = "blur(0px)";
     document.querySelector("#modal").style.zIndex = "-100";
+    document.querySelector("#end-game").style.zIndex = "-200";
     document.querySelector("#main-container").style.pointerEvents = "initial";    
 }
 
