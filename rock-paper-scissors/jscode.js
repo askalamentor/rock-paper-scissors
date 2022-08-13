@@ -22,19 +22,31 @@
             {
                 let userScore = userScoreCounter();
 
+                // check if user score is 5 to end game
                 if (userScore === 5) {
+                    document.querySelector("#win-lose-text").innerText = "You win :)";
+                    document.querySelector("#main-container").style.filter = "blur(15px)";
                     document.querySelector("#modal").style.zIndex = "100";
-                    document.querySelector("#main-container").style.pointerEvents = "none";
+                    document.querySelector("#main-container").style.pointerEvents = "none";                
                 }
             } 
             else if (scoreArray[1] === 1) 
             {
                 let generatorScore = generatorScoreCounter();
+
+                // check if computer score is 5 to end game
                 if (generatorScore === 5) {
+                    document.querySelector("#win-lose-text").innerText = "You lost :(";
+                    document.querySelector("#main-container").style.filter = "blur(15px)";
                     document.querySelector("#modal").style.zIndex = "100";
-                    document.querySelector("#main-container").style.pointerEvents = "none";
+                    document.querySelector("#main-container").style.pointerEvents = "none";               
                 }
             }
+
+            // End game - check if user clicks yes or no condition
+            document.querySelector("#modal-submit").addEventListener("click", () => {
+                resetGame();
+            });
         });      
     }
 
@@ -135,6 +147,14 @@ function resetButtonsStyle(generatorButtons, buttons) {
         document.getElementById(buttons[i].id).firstChild.style.border = "2px solid #555";
     }
 
+}
+
+function resetGame() {
+    document.querySelector("#userScore").innerText = "0";
+    document.querySelector("#generatorScore").innerText = "0";
+    document.querySelector("#main-container").style.filter = "blur(0px)";
+    document.querySelector("#modal").style.zIndex = "-100";
+    document.querySelector("#main-container").style.pointerEvents = "initial";    
 }
 
 
