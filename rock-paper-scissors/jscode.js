@@ -54,6 +54,11 @@
         });      
     }
 
+    // if user want to go back to the game at the quit page
+    document.querySelector("returnGameButton").addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+
 // rock-paper-scissors generator
 function randomGenerator() {
     

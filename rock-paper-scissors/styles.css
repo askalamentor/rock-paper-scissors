@@ -148,13 +148,34 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color:  rgb(49, 47, 47);
-    color: antiquewhite;
-    font-size: 72px;
 }
 
 #quit-page-container > #quit-page-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+    font-size: 72px;
+    height: 300px;
+    background-color: rgb(212, 212, 55);
 }
+
+#returnGameButton {
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgb(212, 212, 55);
+    margin-top: 125px;
+}
+
+#returnGameButton:hover {
+    background-color: rgb(121, 184, 121);
+    transform: translateY(-5px);
+    transition-duration: 1s;
+}
+
