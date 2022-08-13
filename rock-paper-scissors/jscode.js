@@ -45,7 +45,7 @@
 
             // End game - check if user clicks yes or no condition
             document.querySelector("#modal-submit").addEventListener("click", () => {
-                resetGame();
+                window.location.href = "index.html";
             });
 
             document.querySelector("#modal-endgame").addEventListener("click", () => {
@@ -55,7 +55,7 @@
     }
 
     // if user want to go back to the game at the quit page
-    document.querySelector("returnGameButton").addEventListener("click", () => {
+    document.querySelector("#returnGameButton").addEventListener("click", () => {
         window.location.href = "index.html";
     });
 
@@ -157,16 +157,3 @@ function resetButtonsStyle(generatorButtons, buttons) {
     }
 
 }
-
-function resetGame() {
-    document.querySelector("#userScore").innerText = "0";
-    document.querySelector("#generatorScore").innerText = "0";
-    document.querySelector("#main-container").style.filter = "blur(0px)";
-    document.querySelector("#modal").style.zIndex = "-100";
-    document.querySelector("#end-game").style.zIndex = "-200";
-    document.querySelector("#main-container").style.pointerEvents = "initial";    
-}
-
-
-
-
